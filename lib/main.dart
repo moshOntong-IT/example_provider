@@ -30,7 +30,8 @@ class MyHomePage extends StatelessWidget {
   const MyHomePage({Key key, this.title}) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    final _counter = Provider.of<Counter>(context);
+    //listener:false for only specific listener using Consumer
+    final _counter = Provider.of<Counter>(context, listen: false);
     return Scaffold(
       appBar: AppBar(
         title: Text(title),
